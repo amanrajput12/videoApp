@@ -12,7 +12,7 @@ const Videocomp = () => {
   const getVideos = async ()=>{
     const data =await fetch(YOUTUBE_VIDEO_API)
     const json = await data.json()
-    console.log('data get',json);
+    // console.log('data get',json);
     setVideos(json.items)
   }
   return (

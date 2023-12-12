@@ -6,7 +6,7 @@ import Head from './Head'
 
 const Body = () => {
   return (
-    <div>
+    <div className=''>
      <Head/>
     <div className='grid grid-flow-col'>
         <Sidebar/>

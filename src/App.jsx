@@ -9,6 +9,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Maincomp from './components/Maincomp'
 import Watch from './components/Watch'
 import SearchVideoComp from './components/SearchVideoComp'
+import Playlist from './components/Playlist'
+import ChannelComp from './components/ChannelComp'
 const appRouter = createBrowserRouter([{
   path:"/",
   element:<Body/>,
@@ -23,6 +25,13 @@ const appRouter = createBrowserRouter([{
     {
    path:"/results",
   element:<SearchVideoComp/>
+    },{
+    path:"/playlist",
+    element:<Playlist/>
+    },
+    {
+   path:"/channel",
+   element:<ChannelComp/>
     }
 ]
 }])

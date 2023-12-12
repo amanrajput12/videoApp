@@ -4,6 +4,7 @@ import { closeMenu } from '../utils/AppSlice'
 import { useSearchParams } from 'react-router-dom'
 import ComentContanier from './ComentContanier'
 import { YOUTUBE_COMMENTS_URL } from '../utils/Constant'
+import Playlist from './Playlist'
 const Watch = () => {
     const dispatch =useDispatch()
     const [searchparams] = useSearchParams()
@@ -12,7 +13,7 @@ const Watch = () => {
     
     useEffect(()=>{
 dispatch(closeMenu())
-getComment()
+// getComment()
     },[])
     const getComment = async()=>{
       const data = await fetch(YOUTUBE_COMMENTS_URL+searchparams.get("v"))
@@ -22,15 +23,15 @@ getComment()
     }
   return (
   <div>
-    <div className='col-span-11 px-5'>
-        <iframe width="1100"
-         height="600" 
+    <div className='col-span-11  px-5'>
+        <iframe className='w-[90vw] mt-2 lg:w-[900px] h-[200px] lg:h-[500px] rounded-lg'
          src={"https://www.youtube.com/embed/"+searchparams.get("v")+"?autoplay=1"} 
          title="YouTube video player"
           frameBorder="0"
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-       </div> 
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+       </div> 8
        {/* <ComentContanier commentInfo={commentData}/>  */}
+       {/* <Playlist/> */}
     </div>
   
   )
