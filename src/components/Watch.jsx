@@ -28,8 +28,8 @@ dispatch(closeMenu())
          src={"https://www.youtube.com/embed/"+searchparams.get("v")+"?autoplay=1"} 
          title="YouTube video player"
           frameBorder="0"
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-       </div> 8
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowFullScreen></iframe>
+       </div> 
        {/* <ComentContanier commentInfo={commentData}/>  */}
        {/* <Playlist/> */}
     </div>

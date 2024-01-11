@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BsYoutube } from 'react-icons/bs';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle,FaFilm } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../utils/AppSlice';
 import { YOUTUBE_SEARCH_API } from '../utils/Constant';
@@ -64,10 +64,11 @@ const Head = () => {
           onClick={() => togleMenuHandler()}
         />
         <Link to="/">
-          <li className="flex font-extrabold mx-3 ">
-            <BsYoutube className="text-2xl text-red-700" />
-            Youtube
-          </li>
+          <li className="flex font-extrabold mx-3  ">
+           
+            <FaFilm className='text-2xl text-red-700' />
+         
+            <span className='text-red-400 ml-1 shadow-amber-100'> E </span> ntertainment          </li>
         </Link>
       </div>
       <div className="col-span-10 md:ml-36 items-center ">

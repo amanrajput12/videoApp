@@ -6,7 +6,7 @@ const Maincomp = () => {
   return (
     <div className='col-span-11 z-0 '>
       
-        <Buttonlist/>
+        {/* <Buttonlist/> */}
         <Videocomp/>
     </div>
   )

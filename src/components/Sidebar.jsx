@@ -11,10 +11,10 @@ const Sidebar = () => {
       <div className='sticky top-20'>
       <ul>
         <Link to="/"><li>Home</li></Link>
-        <li>Short</li>
-      <Link to="/results">  <li>Live</li> </Link>
+        
+      
       </ul>
-      <h1 className='font-bold'>subscription</h1>
+      
       <ul>
         <li>Music</li>
         <li>sport</li> 
@@ -22,7 +22,7 @@ const Sidebar = () => {
         <li>Movies </li>
       </ul>
 
-      <h1 className='font-bold py-2 '>Watch later</h1>
+      
       <ul>
         <li>Music</li>
         <li>sport</li>
