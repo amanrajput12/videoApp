@@ -7,18 +7,36 @@ const Playlist = () => {
   const [playlist, setPlaylist] = useState([]);
   const [searchparams] = useSearchParams();
   const [playvideoId, setPlayVideoId] = useState('');
-
+ console.log('playlist url',PLAYLIST);
   useEffect(() => {
     getplaylist();
   }, []);
-
+  
   const getplaylist = async () => {
-    const data = await fetch(PLAYLIST + searchparams.get('s'));
+
+try {
+  console.log('playlist seach params',searchparams.get('s'));
+    const data = await fetch(PLAYLIST+searchparams.get("s"))
     const json = await data.json();
-    setPlaylist(json.items);
-    setPlayVideoId(json.items[0].contentDetails.videoId);
+  
+    console.log('check playllist of search comp',data);
+    console.log('json check ',json);
+    setPlayVideoId(json?.items[0]?.contentDetails?.videoId);
+    setPlaylist(json.items)
+  
+} catch (error) {
+  console.log('in plyalist error ',error);
+}
+
+    
+
+
+   
   };
 
+
+
+  console.log('now initial playvideoId',playlist);
   return (
     <div className='col-span-11 flex'>
       <div className='w-3/4'>
@@ -26,7 +44,7 @@ const Playlist = () => {
         <iframe className='rounded-lg mr-2 ml-2'
           width='800'
           height='500'
-          src={'https://www.youtube.com/embed/' + playvideoId + '?autoplay=1'}
+          src={'https://www.youtube.com/embed/'+playvideoId+'?autoplay=1'}
           title='YouTube video player'
           frameBorder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
