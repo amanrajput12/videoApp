@@ -1,10 +1,10 @@
 // offical accoutn api 
 
-const  GOOGLE_API_KEY="AIzaSyCJd1GNpm_PrkQudKsXaxk-ZAK4MDlb1Yg"
+const  GOOGLE_API_KEY=""
 
 
-// //  rajputaman accoutn api key
-// const  GOOGLE_API_KEY ="AIzaSyAGixmYlMp0WOpqgDhohqso6nqc-zY9-fk"
+
+// const  GOOGLE_API_KEY =""
  
  
 
