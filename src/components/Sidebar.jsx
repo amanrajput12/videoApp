@@ -20,13 +20,6 @@ const Sidebar = () => {
         <li>Movies </li>
       </ul>
 
-      <h1 className='font-bold py-2 '>Watch later</h1>
-      <ul>
-        <li>Music</li>
-        <li>sport</li>
-        <li>Gaming</li>
-        <li>Movies </li>
-      </ul>
     </div>
   )
 }
